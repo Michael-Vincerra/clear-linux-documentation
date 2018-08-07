@@ -414,7 +414,7 @@ SSH into your Clear Linux host and launch VNC
       #. Set the :guilabel:`Connection type` option to :guilabel:`SSH`.
       #. Click the :guilabel:`Open` button.
 
-         .. figure:: figures/vnc/vnc-1.png
+         .. figure:: ./figures/vnc/vnc-1.png
             :scale: 90 %
             :alt: Putty - configure SSH session settings
 
@@ -501,7 +501,7 @@ number.
    The following screenshot shows connecting to |CL| host 
    192.168.25.54 with a fully-qualified VNC port number 5902.
 
-   .. figure:: figures/vnc/vnc-2.png
+   .. figure:: ./figures/vnc/vnc-2.png
       :scale: 90 %
       :alt: RealVNC Viewer
 
@@ -529,7 +529,7 @@ To increase the RealVNC viewer image quality, manually change the `ColorLevel` v
 #. Right-click a connection node and select :guilabel:`Properties...`.
    See Figure 3.
 
-   .. figure:: figures/vnc/vnc-3.png
+   .. figure:: ./figures/vnc/vnc-3.png
       :scale: 90 %
       :alt: RealVNC Viewer - change connection node properties
 
@@ -540,7 +540,7 @@ To increase the RealVNC viewer image quality, manually change the `ColorLevel` v
 #. Select the :guilabel:`ColorLevel` setting and change it to your
    preferred setting.
 
-   .. figure:: figures/vnc/vnc-4.png
+   .. figure:: ./figures/vnc/vnc-4.png
       :scale: 90 %
       :alt: RealVNC Viewer - change ColorLevel
 
@@ -584,7 +584,7 @@ Encrypt VNC traffic through an SSH tunnel
 By default, VNC traffic is not encrypted.  Figure 6 shows an example warning 
 from RealVNC Viewer.
 
-.. figure:: figures/vnc/vnc-6.png
+.. figure:: ./figures/vnc/vnc-6.png
    :scale: 90 %
    :alt: RealVNC Viewer - Connection not encrypted warning
 
@@ -675,7 +675,7 @@ For `Method 3`:
 Figure 7 shows two VNC sessions (5901 and 5905) accepting connections from
 any host as specified by the `0.0.0.0`'s.  This is before the `-localhost` option was used.  
 
-.. figure:: figures/vnc/vnc-7.png
+.. figure:: ./figures/vnc/vnc-7.png
    :scale: 100 %
    :alt: VNC session accepting connection from any host
 
@@ -683,7 +683,7 @@ any host as specified by the `0.0.0.0`'s.  This is before the `-localhost` optio
 
 Figure 8 shows two VNC sessions (5901 and 5905) only accepting connections from localhost as specified by `127.0.0.1`'s. This is after the `-localhost` option was used.  
  
-.. figure:: figures/vnc/vnc-8.png
+.. figure:: ./figures/vnc/vnc-8.png
    :scale: 100 %
    :alt: VNC session only accepting connection from localhost
 
@@ -744,7 +744,7 @@ Set up an SSH tunnel from your client system to your |CL| host
 
    #. Click the :guilabel:`Add` button.
  
-      .. figure:: figures/vnc/vnc-9.png
+      .. figure:: ./figures/vnc/vnc-9.png
          :scale: 100 %
          :alt: Putty - configure SSH tunnel
 
@@ -773,7 +773,7 @@ your VNC session.
 #. Enter `localhost` and the fully-qualified VNC port number.  See Figure 10
    for an example.
 
-   .. figure:: figures/vnc/vnc-10.png
+   .. figure:: ./figures/vnc/vnc-10.png
       :scale: 100 %
       :alt: RealVNC viewer app connecting to localhost:1234
  

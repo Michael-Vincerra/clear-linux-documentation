@@ -17,7 +17,7 @@ files allow us to customize the instance of the installation.
 Figure 1 depicts the flow of information between a PXE server and a PXE
 client that needs to be set up to perform a bulk provision.
 
-.. figure:: ./figures/bulk-provision-flow.png
+.. figure:: figures/bulk-provision-flow.png
    :alt: Bulk provision information flow
 
    Figure 1: Bulk provision information flow
