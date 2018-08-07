@@ -9,5 +9,9 @@ after completing the |CL| :ref:`installation <get-started>`.
 .. toctree::
    :maxdepth: 2
 
+   administrator/administrator
+   basics/basics
+   developer/developer
+   
    maintenance/maintenance
    network/network
