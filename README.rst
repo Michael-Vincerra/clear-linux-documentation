@@ -28,8 +28,6 @@ check your python version you might need something like:
    $ sudo apt-get install python-pip
    $ sudo pip install -U sphinx sphinx-autobuild
 
-
-
 .. code-block:: console
 
    $ python -c 'print __import__("sphinx").__version__'

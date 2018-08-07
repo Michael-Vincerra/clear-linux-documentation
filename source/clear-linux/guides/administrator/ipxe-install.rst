@@ -18,7 +18,7 @@ enables network booting on computers with no built-in PXE support.
 To install |CL| through iPXE, you must create a PXE client. Figure 1 depicts
 the flow of information between a PXE server and a PXE client.
 
-.. figure:: ./figures/network-boot-flow.png
+.. figure:: figures/network-boot-flow.png
    :alt: PXE information flow
 
    Figure 1: PXE information flow.
@@ -37,7 +37,7 @@ Before booting with iPXE, make the following preparations.
 Connect the PXE server and PXE clients to a switch on a private network, as
 shown in Figure 2.
 
-.. figure:: ./figures/network-boot-setup.png
+.. figure:: figures/network-boot-setup.png
    :alt: Network topology
 
    Figure 2: Network topology.

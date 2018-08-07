@@ -140,7 +140,7 @@ Resize the partition of the virtual disk:
 
       Figure 1 depicts the described steps  to resize the partition of the virtual disk from 8.5GB to 20GB.
 
-      .. figure:: ./figures/increase-virtual-disk-size-1.png
+      .. figure:: figures/increase-virtual-disk-size-1.png
          :scale: 100 %
          :alt: Increase root partition size 
 
@@ -157,7 +157,7 @@ Resize the filesytem
 
    Figure 2 depicts the described steps to resize the partition of the virtual disk from 8.5GB to 20GB.
 
-   .. figure:: ./figures/increase-virtual-disk-size-2.png
+   .. figure:: figures/increase-virtual-disk-size-2.png
       :scale: 100 %
       :alt: Increase root filesystem with resize2fs
 
