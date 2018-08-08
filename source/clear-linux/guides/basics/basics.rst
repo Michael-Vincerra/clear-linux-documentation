@@ -1,8 +1,8 @@
 .. _basics: 
 
 
-Basics Guide
-############
+Basics
+######
 
 Intro paragraph. 
 

@@ -13,5 +13,3 @@ after completing the |CL| :ref:`installation <get-started>`.
    basics/basics
    developer/developer
    
-   maintenance/maintenance
-   network/network

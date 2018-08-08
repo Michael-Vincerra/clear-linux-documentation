@@ -1,7 +1,7 @@
 .. _administrator: 
 
-Administrator Guide
-===================
+Administrator
+=============
 
 Intro paragraph. 
 

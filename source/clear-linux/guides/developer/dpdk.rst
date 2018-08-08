@@ -10,7 +10,7 @@ drivers, sample applications, and tools for fast packet processing.
 
 .. _f1:
 
-.. figure:: ./figures/pktgen_lw3fd.png
+.. figure:: figures/pktgen_lw3fd.png
    :align: center
    :alt: Platform A and B
 
@@ -164,7 +164,7 @@ cables as shown in :ref:`Figure 2<f2>`.
 
 .. _f2:
 
-.. figure:: ./figures/pyshical_net.png
+.. figure:: figures/pyshical_net.png
 
     Figure 2: Physical network environment
 
