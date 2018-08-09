@@ -6,14 +6,16 @@ Developer Workstation
 Workstation Setup
 *****************
 
-*Workstation Setup* helps you, the developer, find the tools you need to start your project. 
+*Workstation Setup* helps you, the developer, find the tools you need to 
+start your project. 
 
 Use the *Clear Linux Developer Profiles* (Table 1) to help you decide which 
 bundles, at minimum, you need to set up your developer workstation. 
 
-We recommend using :ref:`developer-help` to jump-start your skills in using fundamental |CL| features like `swupd`. 
+We recommend using :ref:`swupd-search` to jump-start your skills in using 
+fundamental |CL| features like `swupd`. 
 
-:ref:`Developer Help <developer-help>` shows: 
+:ref:`swupd search <swupd-search>` shows: 
 
 * How to use `swupd` commands
 * How to search for bundles (that contain packages)

@@ -1,22 +1,20 @@
 .. _developer-help: 
 
-Developer Help
-##############
+Use swupd search to find a bundle
+#################################
 
 .. contents:: :local: 
    depth: 2
 
-This guide shows you how to use `swupd` as a Developer. We assume that you 
-have a base knowledge of: 
+This illustration shows you how to use `swupd search` as a Developer. We 
+assume that you have a base knowledge of: 
 
 * How :ref:`swupd <swupd-guide>` works 
 * How :ref:`swupd <swupd-about>` differs from *package managers* in other Linux\* distributions 
 
 
-.. TODO: THis will follow using 'mixer'
+.. TODO: This will follow using 'mixer'. Explain the end goal of mixer. 
 
-How to find an appropriate bundle
-*********************************
 
 Scenario 1: Data Science with Python
 ====================================
