@@ -15,7 +15,7 @@ shown below:
 
    autospec
    custom-clear-containers
-   developer-help
+   swupd-search
    developer-workstation
    dpdk
    mixer
