@@ -1,4 +1,4 @@
-.. _developer-help: 
+.. _swupd-search: 
 
 Use swupd search to find a bundle
 #################################
