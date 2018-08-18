@@ -5,10 +5,8 @@ Basics
 ######
 
 Learning the basics of |CL| isn't that different from other Linux\* 
-distros. With one exception. |CL| is simpler. And it's easier to manage. 
-
-
-
+distros. With one exception. |CL| is simpler. And it's easier to manage
+because of :ref:`bundles-about`.
 
 Intro paragraph. 
 

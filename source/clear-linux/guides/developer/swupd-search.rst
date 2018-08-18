@@ -1,112 +1,143 @@
 .. _swupd-search: 
 
-Use swupd search to find a bundle
-#################################
+Use swupd search to find bundles
+################################
 
 .. contents:: :local: 
    depth: 2
 
-This illustration shows you how to use `swupd search` as a Developer. We 
-assume that you have a base knowledge of: 
+This document shows you how to use `swupd search` to find and add
+bundles. 
 
-* How :ref:`swupd <swupd-guide>` works 
-* How :ref:`swupd <swupd-about>` differs from *package managers* in other Linux\* distributions 
+Assumptions
+***********
 
+This guide assumes you: 
 
-.. TODO: This will follow using 'mixer'. Explain the end goal of mixer. 
+* Possess a basic knowledge of :ref:`swupd <swupd-guide>` 
+* Understand :ref:`how swupd differs <swupd-about>` from  
+  other Linux\* distributions 
+* May use :ref:`mixer` to build your own |CL| OS
 
+How do I search for a bundle? 
+*****************************
 
-Scenario 1: Data Science with Python
-====================================
+Use `swupd search` to locate the bundle where the application binary exists. 
 
-We're developing a custom Clear Linux OS for data science with Python. We'll 
-develop our own mix, from which we'll create a release image. That image 
-will be distributed to data center (DC) clients across the United States  
-who need this data to determine DC workload balancing. We need to
-create a tool to analyze energy consumption profiles based on population 
-statistics and consumption data, whose results are heat-maps showing where 
-and when energy consumption peaks in large metropolitan areas. 
+Example: Kata Containers
+========================
 
-.. Given that our project requires `statsmodels` for modeling, 
-..  `matplotlib` for charts, as well `numpy` and `pandas` for set analysis, ... we need a sophisticated set of tools.
+Containers have revolutionized the way we manage cloud infrastructure. 
+Traditional containers often share the same OS kernel, which raises 
+security concerns. Instead, with Kata Containers, each container has its own 
+kernel instance and runs on its own :abbr:`Virtual Machine (VM)`. Whether you're running 3 or 300 nodes on your cluster, Kata Containers provide a 
+lightweight, fast, and secure option for app/container management.  
 
-First, use :command:`swupd search` with a general term like *Python*. 
+In |CL|, you only need to add `this bundle`_ to use `Kata Containers`_: 
+`containers-virt`. Also, check out our tutorial: :ref:`kata`.
 
-#. Enter this command and add 'Python' as the search term: 
+We need to find *kata* containers in a bundle. How do we search for it? 
 
-   .. code-block:: bash
-
-      sudo swupd search -b Python
-
-   .. note::
-      
-      `swupd search` searches for matching paths in the manifest data. 
-      Enter only one term, or one hyphenated term, at a time. 
-      Use the command :command:`man swupd` to learn more. 
-
-.. TODO: Add tensorflow and more on machine learning in description. 
-
-#. Results of `swupd search` shows the best match for our use case.
-
-   .. code-block:: console
-
-      Bundle python-data-science	(923 MB to install)
-      		/usr/bin/ipython3
-      		/usr/bin/ipython
-
-   .. note::
-
-      Result shown above is one of several shown in standard output.  
-
-      If the bundle is already installed, [installed] appears in search results. If it doesn't apppear, the bundle needs to be installed. 
-
-# If you know you want to import a module from a package 
-   consider using sed.... Use an example here. 
-
-
-
-
-
-
-
-#. Add the bundle `python-data-science`.
+#. Enter :command:`swupd search`, followed by 'kata' as the search term: 
 
    .. code-block:: bash
 
-      sudo swupd bundle-add python-data-science
-
-#. When prompted, enter your password. 
+      sudo swupd search kata
 
    .. note:: 
 
-      You should see console data similar to the following: 
+      `swupd search` downloads |CL| manifest data and searches for
+      matching paths. Enter only one term, or hyphenated term, per 
+      search. Use the command :command:`man swupd` to learn more.
 
+#. Alternatively, if you want to search binaries only, add the `-b`
+   flag: 
+
+   .. code-block:: bash
+
+      sudo swupd search -b kata
+
+   .. note::
+
+      `-b` flag, or `--binary`, means: Restrict search to program binary paths. Omit this flag if you want a larger scope of search results.  
+
+      Only the base bundle is returned. In |CL|, *bundles* can contain 
+      other *bundles* via `includes`. For more details, see `Bundle Definition Files`_ and its subdirectory *bundles*. 
+
+      If your search does not produce results on a specific term when using
+      the `-b` flag, abbreviate the search term. For example, if you search 
+      for *kubernetes* and it does not show results, instead abbreviate the 
+      term to *kube* to show results. 
+
+#. Optionally, you can review our `bundles`_ or individual `packages`_
+
+#. Using `sudo swupd search -b kata` shows a match for our use case.
+
+   .. code-block:: console
+
+      Bundle containers-virt    (834 MB to install)
+          /usr/bin/kata-virtfs-lite-proxy-helper
+          /usr/bin/kata-runtime
+          /usr/bin/kata-qemu-lite-system-x86_64
+          /usr/bin/kata-qemu-lite-pr-helper
+          /usr/bin/kata-qemu-lite-ga
+          /usr/bin/kata-collect-data.sh
+
+   .. note::
+
+      If the bundle is already installed, *[installed]* appears in search results. If this doesn't apppear, the bundle needs to be installed. 
+
+#. Add the bundle `containers-virt`:
+
+   .. code-block:: bash
+
+      sudo swupd bundle-add containers-virt
+
+   .. note::
+
+      To add multiple bundles simply add a space followed by the bundle name.
+
+#. When prompted, enter your password. 
+
+#. Upon successful installation, your console should show similar data:
+  
    .. code-block:: console 
 
-      Password: 
       Downloading packs...
 
-      Extracting python-data-science pack for version 23710
-      ...50%
-      Extracting python-extras pack for version 23830
-      ...100%
+      Extracting containers-virt pack for version 24430
+          ...50%
+      Extracting kernel-container pack for version 24430
+          ...100%
       Starting download of remaining update content. This may take a while...
-      ...100%
+          ...100%
       Finishing download of update content...
       Installing bundle(s) files...
-      ...100%
+          ...100%
       Calling post-update helper scripts.
       Successfully installed 1 bundle
+
 FAQ
 ===
 
-Find answers to these common questions in this section: 
+Find answers to these common questions: 
 
-* How do I show all bundles available?
-* How do I find the bundles I need?
-* How do I use `swupd` search?
-* How do I add new bundles? 
+* How do I install and *use* :ref:`Kata Containers <kata>` on |CL|? 
 
-.. note:: 
-   
-   For developers who do not wish to adopt the |CL| Common Tooling Framework (e.g., Autospec, etc.), select the complementary :file:`-dev` bundle in order to successfully build each bundle. 
+* How do I :ref:`kata_migration`?
+
+* How do I show all :ref:`bundles available <swupd-guide>`?
+
+* How do I :ref:`update swupd<swupd-guide>`? 
+
+* How do I :ref:`remove bundles<swupd-guide>`? 
+
+.. _Kata Containers: https://clearlinux.org/blogs/clear-linux-os-announces-support-kata-containers
+
+.. _this bundle: https://github.com/clearlinux/clr-bundles/blob/master/bundles/containers-virt
+
+.. _Bundle Definition Files: https://github.com/clearlinux/clr-bundles
+
+ .. _bundles: https://github.com/clearlinux/clr-bundles/tree/master/bundles 
+
+ .. _packages: https://github.com/clearlinux/clr-bundles/blob/master/packages 

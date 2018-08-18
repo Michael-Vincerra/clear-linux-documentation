@@ -3,9 +3,9 @@
 Administrator
 =============
 
-Clear Linux* Administrators play a key role in |CL| development, 
+Clear Linux* administrators play a key role in |CL| development, 
 configuring and patching systems for optimization, ensuring business 
-continuity, implementing cloud and virtualization solutions, and much more. 
+continuity, maintaining cloud and virtualization solutions, and much more. 
 
 We provide the following guides that extend the capabilities of the |CL|
 platform: 
